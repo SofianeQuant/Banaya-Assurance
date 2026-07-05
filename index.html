@@ -309,6 +309,8 @@ select.bny-inp{-webkit-appearance:none;appearance:none;cursor:pointer;padding-ri
 .bny-confirm{background:#fff;border:1px solid var(--bny-line);border-radius:16px;padding:36px;text-align:center;margin-top:8px}
 .bny-confirm-imgs{display:flex;justify-content:center;gap:8px;margin-bottom:28px}
 .bny-confirm-imgs img{width:130px;height:130px;object-fit:contain}
+.bny-confirm-logo{display:flex;justify-content:center;margin-bottom:28px}
+.bny-confirm-logo img{height:64px;width:auto;object-fit:contain}
 .bny-confirm p{font-size:15px;line-height:1.7;color:#333;margin:0 auto 18px;max-width:520px}
 .bny-confirm p:last-child{margin-bottom:0}
 .bny-confirm a{color:#111;text-decoration:underline}
@@ -321,6 +323,7 @@ select.bny-inp{-webkit-appearance:none;appearance:none;cursor:pointer;padding-ri
   .bny-devis2-top{flex-direction:column}
   .bny-devis2-price{font-size:28px}
   .bny-confirm-imgs img{width:100px;height:100px}
+  .bny-confirm-logo img{height:52px}
 }
 </style></head><body><div id="bny-app"></div>
 <script>
@@ -500,7 +503,7 @@ return c;}
 
 function scrConfirmation(){if(!S.contractNum)S.contractNum='HW'+Math.floor(100000+Math.random()*900000)+'-0';var num=S.contractNum;var c='';
 c+='<h1 class="bny-h1 bny-center">Confirmation d\u2019adh\u00e9sion</h1>';
-c+='<div class="bny-confirm"><div class="bny-confirm-imgs"><img src="'+CHIEN_IMG+'" alt="Chien" onerror="this.style.display=&quot;none&quot;"><img src="'+CHAT_IMG+'" alt="Chat" onerror="this.style.display=&quot;none&quot;"></div>';
+c+='<div class="bny-confirm"><div class="bny-confirm-logo"><img src="https://www.banaya.fr/cdn/shop/files/logo-banaya-800.png?v=1757689805&width=600" alt="banaya"></div>';
 c+='<p>Vous venez de recevoir un email avec vos documents contractuels.</p>';
 c+='<p>Pensez \u00e0 bien conserver <b>votre num\u00e9ro de contrat '+num+'</b> qui devra \u00eatre rappel\u00e9 en cas de d\u00e9claration de sinistre.</p>';
 c+='<p>Pour toute question, contactez-nous directement par email \u00e0 <a href="mailto:santeanimale-banaya@tessi.fr">santeanimale-banaya@tessi.fr</a>.</p>';
