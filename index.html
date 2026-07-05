@@ -538,6 +538,8 @@ app.querySelectorAll('[data-prelev]').forEach(function(x){x.onclick=function(){s
 app.querySelectorAll('[data-pay]').forEach(function(x){x.onclick=function(){saveInputs();S.paymethod=x.getAttribute('data-pay');render();};});
 app.querySelectorAll('[data-go]').forEach(function(x){x.onclick=function(){saveInputs();go(parseInt(x.getAttribute('data-go'),10));};});
 app.querySelectorAll('[data-noop]').forEach(function(x){x.onclick=function(){return false;};});}
+function bnyPresetAnimal(){var m=(location.search.match(/[?&](?:animal|espece|pet)=([^&#]+)/i)||[])[1];if(!m){var h=(location.hash||'').replace('#','');if(/^(chien|chat|dog|cat)$/i.test(h))m=h;}if(m){m=decodeURIComponent(m).toLowerCase();if(m==='dog')m='chien';if(m==='cat')m='chat';if(m==='chien'||m==='chat')S.espece=m;}}
+bnyPresetAnimal();
 if(document.getElementById('bny-app')){render();}else{document.addEventListener('DOMContentLoaded',render);}
 
 </script></body></html>
